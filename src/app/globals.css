@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-beige text-black font-sans antialiased;
+  }
+
+  main {
+    @apply bg-beige;
+  }
+
+  main > section:nth-child(odd) {
+    @apply bg-beige;
+  }
+
+  main > section:nth-child(even) {
+    @apply relative overflow-hidden bg-blue/25;
+  }
+
+  ::selection {
+    @apply bg-blue/40 text-black;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue;
+  }
+}
+
+@layer components {
+  .text-gradient-hero {
+    @apply text-blue;
+    font-weight: 400;
+  }
+
+  .btn-gradient-hero {
+    @apply bg-blue text-white;
+  }
+
+  .btn-gradient-hero:hover {
+    @apply bg-blue/90;
+  }
+
+  .bg-gradient-cta {
+    background: linear-gradient(135deg, #a7c9e8 0%, #f3eee8 50%, #a7c9e8 100%);
+    background-size: 300% 300%;
+  }
+
+  .px-page {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-6xl px-page;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-page;
+  }
+}
