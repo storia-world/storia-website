@@ -6,6 +6,8 @@ export const siteConfig = {
   url: "https://storia.app",
   appStoreUrl:
     "https://apps.apple.com/us/app/storia-future-self-coach/id6455785300",
+  privacyUrl: "/privacy",
+  termsUrl: "/terms",
   social: {
     instagram:
       "https://www.instagram.com/storia_world?igsh=MXJxN3JkNGoxYW1ieg==",
@@ -27,26 +29,32 @@ export const navLinks = [
 export const footerSectionLinks = [
   { href: "/#home", label: "Home" },
   { href: "/#about-the-app", label: "About" },
-  { href: "/#guided-prompts", label: "Guided prompts" },
-  { href: "/#personalised", label: "Personalised" },
-  { href: "/#weekly-progress", label: "Weekly insights" },
-  { href: "/#busy-minds", label: "Five minutes" },
-  { href: "/#progress", label: "Your progress" },
   { href: "/#how-it-works", label: "How it works" },
   { href: "/#why-storia", label: "Why Storia" },
   { href: "/#community", label: "Community" },
-  { href: "/#world-ritual", label: "Join the movement" },
   { href: "/#testimonials", label: "Testimonials" },
   { href: "/#founder", label: "Founder" },
   { href: "/#faq", label: "FAQ" },
 ];
 
 export const footerLinks = [
-  footerSectionLinks.slice(0, 5),
-  footerSectionLinks.slice(5, 10),
+  // Product
   [
-    ...footerSectionLinks.slice(10),
-    { href: siteConfig.appStoreUrl, label: "Download" },
+    { href: "/#about-the-app", label: "About" },
+    { href: "/#how-it-works", label: "How it works" },
+    { href: "/#why-storia", label: "Why Storia" },
+  ],
+  // Company 
+  [
+    { href: "/#faq", label: "FAQ" },
+    { href: "/#founder", label: "Founder" },
+    { href: "/#community", label: "Community" },
+  ],
+  // Legal & Download
+  [
+    { href: siteConfig.privacyUrl, label: "Privacy" },
+    { href: siteConfig.termsUrl, label: "Terms" },
+    { href: siteConfig.appStoreUrl, label: "Download" }
   ],
 ];
 

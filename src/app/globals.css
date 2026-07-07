@@ -66,4 +66,37 @@
   .container-wide {
     @apply mx-auto w-full max-w-7xl px-page;
   }
+
+  .legal-rich-text {
+    @apply text-base leading-relaxed text-black;
+  }
+
+  .legal-rich-text p {
+    @apply mb-4;
+  }
+
+  .legal-rich-text p:empty,
+  .legal-rich-text p:has(> br:only-child) {
+    @apply mb-4;
+  }
+
+  .legal-rich-text strong {
+    @apply font-semibold;
+  }
+
+  .legal-rich-text a {
+    @apply text-black underline decoration-black/30 underline-offset-2 transition-colors hover:decoration-black;
+  }
+
+  .legal-rich-text ul {
+    @apply mb-4 list-disc space-y-2 pl-6;
+  }
+
+  .legal-rich-text li {
+    @apply leading-relaxed;
+  }
+
+  .legal-rich-text [id] {
+    scroll-margin-top: 6rem;
+  }
 }
