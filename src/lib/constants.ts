@@ -65,35 +65,35 @@ export const communityTestimonials = [
     detail: "Member for 6 months",
     quote:
       "I've never stuck with journaling before. Storia made five minutes feel doable — and now my mornings don't feel right without it. Sunny feels like a friend who actually listens.",
-    avatar: "J",
+    profilePicture: "/testimonial1.png",
   },
   {
     name: "Grace",
     detail: "Career transition",
     quote:
       "Sunny helped me see patterns I'd been repeating for years. The Echo feature made everything click.",
-    avatar: "G",
+    profilePicture: "/testimonial2.png",
   },
   {
     name: "Sienna",
     detail: "Burnout recovery",
     quote:
       "This isn't a blank page staring back at you. It's a gentle conversation that actually helps.",
-    avatar: "S",
+    profilePicture: "/testimonial3.png",
   },
   {
     name: "Liz",
     detail: "3-month streak",
     quote:
       "I've tried every journaling app. Storia is the first one that feels made for real humans.",
-    avatar: "L",
+    profilePicture: "/testimonial4.png",
   },
   {
     name: "Alex",
     detail: "New to journaling",
     quote:
       "Five minutes a day changed how I talk to myself. Small ritual, big difference.",
-    avatar: "A",
+    profilePicture: "/testimonial5.png",
   },
 ];
 

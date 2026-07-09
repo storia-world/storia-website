@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Section, SectionContainer } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -13,21 +13,18 @@ export const PersonalisedSection = () => {
           <SectionHeader
             align="left"
             eyebrow="Personalised to you"
-            title="No two paths are the same."
-            description="Whether you're spiralling, building, or just looking for something real—Storia adapts to your emotional state in real time."
+            title="See how you're doing week to week"
+            description={`Storia learns from your reflections to create a real-time picture of your emotional wellbeing.\n\nNo two journeys are the same. Your daily thoughts, emotions, and experiences are transformed into personalised insights — revealing patterns in your confidence, energy, stress, and behaviour.\n\nSee what’s changing. Understand what’s driving it. Know what to focus on next.`}
           />
 
-          <FadeIn delay={0.1} className="relative">
-            <div className="flex flex-col items-center pt-6 text-center sm:pt-4">
-              <div
-                className="aspect-[9/16] w-full max-w-[220px] rounded-[1.75rem] bg-[#2A2640]/40 ring-1 ring-white/10 sm:max-w-[240px] lg:max-w-[260px]"
-                aria-hidden
-              />
-
-              <p className="mt-8 max-w-xs font-fraunces text-lg font-medium uppercase leading-snug tracking-[0.08em] text-black sm:mt-10 sm:text-xl">
-                Your daily ritual for becoming.
-              </p>
-            </div>
+          <FadeIn delay={0.1} className="flex justify-center">
+            <Image
+              src="/personalisedToYou.png"
+              alt="Woman using Storia with personalised insights and coaching cards"
+              width={1300}
+              height={1900}
+              className="h-auto w-full max-w-[320px] rounded-[1.75rem] object-cover shadow-[0_24px_64px_rgba(33,37,41,0.1)] ring-1 ring-black/5 sm:max-w-[360px] lg:max-w-[420px]"
+            />
           </FadeIn>
         </div>
       </SectionContainer>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Section, SectionContainer } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -9,7 +10,7 @@ const steps = [
     number: "01",
     title: "Check In",
     description:
-      "Name how you feel. Our AI meets you with a question that helps you process it.",
+      "Name how you feel. Storia helps you process it.",
   },
   {
     number: "02",
@@ -36,15 +37,11 @@ export const GuidedPromptsSection = () => {
             />
 
             <FadeIn>
-              <p className="text-lg font-bold text-black sm:text-xl">
-                Your 5-Minute Ritual
-              </p>
-
               <ol className="mt-8 space-y-4">
                 {steps.map((step) => (
                   <li key={step.number}>
                     <p className="text-base font-bold text-black sm:text-lg">
-                      <span className="text-black75">{step.number}</span>
+                      <span className="text-black">{step.number}</span>
                       {" — "}
                       {step.title}
                     </p>
@@ -59,10 +56,13 @@ export const GuidedPromptsSection = () => {
             </FadeIn>
           </div>
 
-          <FadeIn delay={0.1} className="flex justify-center">
-            <div
-              className="aspect-[9/16] w-full max-w-[280px] rounded-[2rem] bg-white/70 shadow-[0_24px_64px_rgba(33,37,41,0.1)] ring-1 ring-black/5 sm:max-w-[300px] lg:max-w-[320px]"
-              aria-hidden
+          <FadeIn delay={0.1} className="flex justify-center lg:justify-end">
+            <Image
+              src="/guidedJournals.png"
+              alt="Woman using Storia's guided journal prompts at a cafe"
+              width={2000}
+              height={1584}
+              className="h-auto w-full max-w-[560px] rounded-[2rem] object-cover shadow-[0_24px_64px_rgba(33,37,41,0.1)] ring-1 ring-black/5 lg:max-w-none"
             />
           </FadeIn>
         </div>

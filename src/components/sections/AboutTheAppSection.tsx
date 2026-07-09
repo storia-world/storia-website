@@ -7,20 +7,20 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const AboutTheAppSection = () => {
   return (
-    <Section id="about-the-app">
-      <SectionContainer>
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,50%)_minmax(0,50%)] lg:gap-14 xl:gap-20">
-          <FadeIn className="flex justify-center lg:justify-center">
+    <Section id="about-the-app" className="relative overflow-hidden">
+      <SectionContainer className="relative">
+        <div className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,50%)_minmax(0,50%)] lg:gap-14 xl:gap-20">
+          <FadeIn className="relative z-0 -ml-5 flex items-end justify-start sm:-ml-8 lg:absolute lg:bottom-0 lg:left-0 lg:top-0 lg:-mb-28 lg:ml-0 lg:w-[calc((100%-3.5rem)/2)] lg:items-end xl:w-[calc((100%-5rem)/2)]">
             <Image
-              src="/storiaFrames.png"
-              alt="Storia app showing the Today dashboard and daily check-in screens"
-              width={3169}
-              height={4742}
-              className="h-auto w-full max-w-[280px] object-contain drop-shadow-[0_24px_64px_rgba(33,37,41,0.12)] sm:max-w-[320px] lg:max-w-[340px]"
+              src="/checkinFrame.png"
+              alt="Hand holding a phone showing Storia's daily check-in screen"
+              width={1963}
+              height={2073}
+              className="h-auto w-full max-w-[280px] object-contain object-left-bottom drop-shadow-[0_24px_64px_rgba(33,37,41,0.12)] sm:max-w-[340px] lg:max-h-full lg:w-auto lg:max-w-full"
             />
           </FadeIn>
 
-          <FadeIn delay={0.1} className="lg:max-w-none">
+          <FadeIn delay={0.1} className="relative z-10 lg:col-start-2 lg:max-w-none">
             <SectionHeader
               align="left"
               eyebrow="About the app"
