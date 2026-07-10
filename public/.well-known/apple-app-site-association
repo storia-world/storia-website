@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "653X55G6U7.world.storia.storia-app",
+        "paths": [
+          "/redirect/*"
+        ]
+      }
+    ]
+  }
+}
