@@ -17,38 +17,23 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { href: "/#about-the-app", label: "About" },
-  { href: "/#how-it-works", label: "How it works" },
-  { href: "/#why-storia", label: "Why Storia" },
-  { href: "/#community", label: "Community" },
+  { href: "/#about-the-app", label: "How it works" },
+  { href: "/#features", label: "Experience" },
   { href: "/#testimonials", label: "Testimonials" },
   { href: "/#founder", label: "Founder" },
   { href: "/#faq", label: "FAQ" },
 ];
-
-export const footerSectionLinks = [
-  { href: "/#home", label: "Home" },
-  { href: "/#about-the-app", label: "About" },
-  { href: "/#how-it-works", label: "How it works" },
-  { href: "/#why-storia", label: "Why Storia" },
-  { href: "/#community", label: "Community" },
-  { href: "/#testimonials", label: "Testimonials" },
-  { href: "/#founder", label: "Founder" },
-  { href: "/#faq", label: "FAQ" },
-];
-
 export const footerLinks = [
   // Product
   [
-    { href: "/#about-the-app", label: "About" },
-    { href: "/#how-it-works", label: "How it works" },
-    { href: "/#why-storia", label: "Why Storia" },
+    { href: "/#about-the-app", label: "How it works" },
+    { href: "/#features", label: "Experience" },
   ],
-  // Company 
+  // Company
   [
-    { href: "/#faq", label: "FAQ" },
+    { href: "/#testimonials", label: "Testimonials" },
     { href: "/#founder", label: "Founder" },
-    { href: "/#community", label: "Community" },
+    { href: "/#faq", label: "FAQ" },
   ],
   // Legal & Download
   [
