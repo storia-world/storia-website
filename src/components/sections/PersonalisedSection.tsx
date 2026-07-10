@@ -13,7 +13,7 @@ export const PersonalisedSection = () => {
           <SectionHeader
             align="left"
             eyebrow="Personalised to you"
-            title="See how you're doing week to week"
+            title={`See how you're doing\nweek to week`}
             description={`Storia learns from your reflections to create a real-time picture of your emotional wellbeing.\n\nNo two journeys are the same. Your daily thoughts, emotions, and experiences are transformed into personalised insights — revealing patterns in your confidence, energy, stress, and behaviour.\n\nSee what’s changing. Understand what’s driving it. Know what to focus on next.`}
           />
 

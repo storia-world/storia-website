@@ -20,13 +20,13 @@ const HomePage = () => {
     <>
       <HeroSection />
       <AboutTheAppSection />
+      {/* <ProblemSection /> */}
       <GuidedPromptsSection />
       <FeaturesCarouselSection />
       <PersonalisedSection />
       {/* <WeeklyProgressSection /> */}
       <BusyMindsSection />
       <ProgressSection />
-      <ProblemSection />
       {/* <WhyStoriaSection /> */}
       {/* <CommunityStatsSection /> */}
       {/* <WorldRitualSection /> */}

@@ -97,7 +97,7 @@ export const SocialProofSection = () => {
             <SectionHeader
               align="left"
               eyebrow="Loved by our community"
-              title="The ritual the world is doing."
+              title={`The ritual the world is\ndoing.`}
             />
             <StaggerChildren className="grid gap-5 sm:grid-cols-3 sm:gap-6">
               {stats.map((stat) => (

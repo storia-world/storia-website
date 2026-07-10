@@ -21,7 +21,7 @@ export const ProgressSection = () => {
 
           <FadeIn delay={0.1} className="w-full min-w-0">
             <Image
-              src="/progressImage.png"
+              src="/progressImage2.png"
               alt="Storia app showing daily check-in, weekly progress, and achievement badges"
               width={2256}
               height={1748}

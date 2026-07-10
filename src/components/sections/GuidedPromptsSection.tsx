@@ -33,7 +33,7 @@ export const GuidedPromptsSection = () => {
             <SectionHeader
               align="left"
               eyebrow="Guided prompts"
-              title={"A ritual made for the mess in 3 simple steps."}
+              title={`A ritual made for the\nmess in 3 simple steps.`}
             />
 
             <FadeIn>

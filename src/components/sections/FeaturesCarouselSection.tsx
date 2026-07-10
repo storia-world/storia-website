@@ -106,7 +106,7 @@ export const FeaturesCarouselSection = () => {
         <SectionHeader
           align="left"
           eyebrow="The experience"
-          title="Built for the way you actually live."
+          title={`Built for the way you\nactually live.`}
         />
 
         <FadeIn delay={0.1}>

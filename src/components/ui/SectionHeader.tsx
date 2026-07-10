@@ -17,6 +17,9 @@ export const SectionHeader = ({
   description,
   align = "center",
 }: SectionHeaderProps) => {
+  const hasLineBreak = title.includes("\n");
+  const titleLines = title.split("\n");
+
   return (
     <FadeIn
       className={cn(
@@ -30,15 +33,17 @@ export const SectionHeader = ({
       <h2
         className={cn(
           "font-fraunces text-4xl font-semibold leading-tight text-black sm:text-5xl",
-          align === "left" && "max-w-2xl",
+          align === "left" && hasLineBreak && "max-w-2xl",
         )}
       >
-        {title.split("\n").map((line, index) => (
-          <Fragment key={line}>
-            {index > 0 && <br />}
-            {line}
-          </Fragment>
-        ))}
+        {hasLineBreak
+          ? titleLines.map((line, index) => (
+              <Fragment key={`${line}-${index}`}>
+                {index > 0 && <br />}
+                {line}
+              </Fragment>
+            ))
+          : title}
       </h2>
       {description && (
         <div

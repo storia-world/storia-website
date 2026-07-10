@@ -29,7 +29,7 @@ export const BusyMindsSection = () => {
             <SectionHeader
               align="left"
               eyebrow="Five minutes"
-              title="Built for busy minds. Not perfect ones."
+              title={`Built for busy minds.\nNot perfect ones.`}
               description={`You don't need to be a writer. Or a planner. Or someone who journals.\n\nYou just need five minutes — and your own attention.`}
             />
 
