@@ -32,17 +32,17 @@ export const SectionHeader = ({
       </p>
       <h2
         className={cn(
-          "font-fraunces text-4xl font-semibold leading-tight text-black sm:text-5xl",
+          "font-fraunces text-3xl font-semibold leading-tight text-black sm:text-5xl",
           align === "left" && hasLineBreak && "max-w-2xl",
         )}
       >
         {hasLineBreak
           ? titleLines.map((line, index) => (
-              <Fragment key={`${line}-${index}`}>
-                {index > 0 && <br />}
-                {line}
-              </Fragment>
-            ))
+            <Fragment key={`${line}-${index}`}>
+              {index > 0 && <br />}
+              {line}
+            </Fragment>
+          ))
           : title}
       </h2>
       {description && (

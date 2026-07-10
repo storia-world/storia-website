@@ -140,7 +140,7 @@ const HeroVideoVisual = () => {
 export const HeroSection = () => {
   return (
     <Section padding={false} id="home" className="relative -mt-16">
-      <SectionContainer className="grid min-h-screen items-center gap-10 pb-28 pt-28 sm:pt-32 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+      <SectionContainer className="grid min-h-screen items-center gap-10 pb-28 pt-28 sm:pt-40 lg:grid-cols-2 lg:gap-12 xl:gap-16">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <motion.h1
             className="max-w-xl text-[2.25rem] font-fraunces leading-[1.12] tracking-tight text-black sm:text-5xl md:text-6xl lg:max-w-none lg:text-[3.25rem] xl:text-[3.75rem]"
@@ -164,7 +164,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.44 }}
-            className="mt-9 flex flex-wrap items-center justify-center gap-8 md:mt-10 lg:justify-start"
+            className="flex flex-wrap items-center justify-center gap-8 lg:justify-start"
           >
             <OfficialAppStoreBadge size="lg" />
             <AppOfTheDayBadge size="lg" />
