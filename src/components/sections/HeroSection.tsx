@@ -178,7 +178,7 @@ export const HeroSection = () => {
           className="flex justify-center lg:justify-end"
         >
           <Image
-            src="/heroSectionImage.png"
+            src="/heroSectionImage1.png"
             alt="Woman using Storia outdoors with life area tags for career, confidence, health, relationships, and burnout"
             width={1200}
             height={1200}

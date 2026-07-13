@@ -6,7 +6,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Section, SectionContainer } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { cn } from "@/lib/utils";
 
 const features = [
   {
@@ -37,7 +36,6 @@ const features = [
 
 export const FeaturesCarouselSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
@@ -46,24 +44,10 @@ export const FeaturesCarouselSection = () => {
     if (!container) return;
 
     const { scrollLeft, scrollWidth, clientWidth } = container;
+    const maxScroll = Math.max(scrollWidth - clientWidth, 0);
+
     setCanScrollLeft(scrollLeft > 8);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 8);
-
-    const cards = container.querySelectorAll<HTMLElement>("[data-carousel-card]");
-    if (!cards.length) return;
-
-    let closestIndex = 0;
-    let closestDistance = Number.POSITIVE_INFINITY;
-
-    cards.forEach((card, index) => {
-      const distance = Math.abs(card.offsetLeft - scrollLeft);
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = index;
-      }
-    });
-
-    setActiveIndex(closestIndex);
+    setCanScrollRight(scrollLeft < maxScroll - 8);
   }, []);
 
   useEffect(() => {
@@ -80,24 +64,16 @@ export const FeaturesCarouselSection = () => {
     };
   }, [updateScrollState]);
 
-  const scrollToIndex = (index: number) => {
-    const container = scrollRef.current;
-    const card = container?.querySelector<HTMLElement>(
-      `[data-carousel-card="${index}"]`,
-    );
-    card?.scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-      block: "nearest",
-    });
-  };
-
   const scrollByDirection = (direction: "left" | "right") => {
-    const nextIndex =
-      direction === "left"
-        ? Math.max(activeIndex - 1, 0)
-        : Math.min(activeIndex + 1, features.length - 1);
-    scrollToIndex(nextIndex);
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const firstCard = container.querySelector<HTMLElement>("[data-carousel-card]");
+    if (!firstCard) return;
+
+    const gap = parseFloat(getComputedStyle(container).gap || "16");
+    const delta = (firstCard.offsetWidth + gap) * (direction === "left" ? -1 : 1);
+    container.scrollBy({ left: delta, behavior: "smooth" });
   };
 
   return (
@@ -153,24 +129,6 @@ export const FeaturesCarouselSection = () => {
                 <ChevronRight className="h-5 w-5" strokeWidth={2} />
               </button>
             )}
-          </div>
-
-          <div className="mt-8 flex justify-center gap-2.5">
-            {features.map((feature, index) => (
-              <button
-                key={feature.src}
-                type="button"
-                onClick={() => scrollToIndex(index)}
-                className={cn(
-                  "rounded-full transition-all duration-300",
-                  index === activeIndex
-                    ? "h-2.5 w-2.5 bg-black"
-                    : "h-2 w-2 bg-black/20 hover:bg-black/35",
-                )}
-                aria-label={`Go to feature ${index + 1}`}
-                aria-current={index === activeIndex ? "true" : undefined}
-              />
-            ))}
           </div>
         </FadeIn>
       </SectionContainer>
