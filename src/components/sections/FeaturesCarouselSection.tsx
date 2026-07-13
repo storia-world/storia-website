@@ -21,7 +21,7 @@ const features = [
     alt: "See patterns you might miss with weekly insights",
   },
   {
-    src: "/features4.png",
+    src: "/features41.png",
     alt: "Watch yourself evolve over time with Life Arc",
   },
   {

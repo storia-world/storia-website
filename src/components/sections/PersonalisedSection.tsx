@@ -19,7 +19,7 @@ export const PersonalisedSection = () => {
 
           <FadeIn delay={0.1} className="flex justify-center">
             <Image
-              src="/personalisedToYou.png"
+              src="/personalisedToYou1.png"
               alt="Woman using Storia with personalised insights and coaching cards"
               width={1300}
               height={1900}
